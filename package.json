@@ -1,0 +1,21 @@
+{
+    "name": "jorgicio-website",
+    "version": "0.0.1",
+    "description": "My personal website",
+    "dependencies": {
+        "nuxt" : "~2.15.8",
+        "bootstrap": "~5.1.3",
+        "@vue/cli": "~4.5.15",
+        "@vue/cli-plugin-typescript": "~4.5.15",
+        "@nuxt/types": "~2.15.8",
+        "@nuxt/typescript-build": "~2.1.0",
+        "@nuxt/typescript-runtime": "~2.1.0",
+        "css-loader": "~4.2.0"
+    },
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "start": "nuxt start"
+    }
+}

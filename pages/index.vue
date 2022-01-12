@@ -1,6 +1,7 @@
-<template>
+<template>   
     <div>
-        <header id="saludo">
+        <Navbar/>
+        <header class="font-bold text-3xl underline">
             <h1>Holi</h1>
         </header>
         <div id="cuerpo">
@@ -8,6 +9,11 @@
         </div>
     </div>
 </template>
-<style lang="scss">
-    @import './assets/scss/main.scss';
-</style>
+<script>
+    import Navbar from '@/components/Navbar'
+    export default {
+        components: {
+            Navbar
+        }
+    }
+</script>

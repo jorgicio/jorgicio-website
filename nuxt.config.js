@@ -1,18 +1,17 @@
 export default {
     css: [
-        '~/assets/css/main.css',
+        '@/assets/css/main.css',
     ],
     buildModules: [
-        '@nuxtjs/style-resources',
+        '@nuxt/postcss8',
     ],
-    styleResources: {
-        scss: [
-            '~/assets/scss/mixins.scss',
-            '~/assets/scss/variables.scss',
-        ],
-        hoistUseStatements: true
+    components: true,
+    build: {
+        postcss: {
+            plugins: {
+                tailwindcss: {},
+                autoprefixer: {},
+            }
+        }
     },
-    plugins: [
-        '~/plugins/bootstrap-vue'
-    ]
 }

@@ -4,16 +4,22 @@
             <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
                 <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
                     <li >
-                        <a href="#">Un item</a>
-                    </li>
-                    <li >
-                        <a href="#">Otro item</a>
-                    </li>
-                    <li >
-                        <a href="#">Otro más</a>
+                        <a href="/">Inicio</a>
                     </li>
                     <li>
-                        <a href="#">¿Cuántos van?</a>
+                        <a href="/about">Sobre mí</a>
+                    </li>
+                    <li >
+                        <a href="/experiencia">Experiencia</a>
+                    </li>
+                    <li >
+                        <a href="https://blog.jorgicio.net">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/contacto">¡Contáctame!</a>
                     </li>
                 </ul>
             </div>

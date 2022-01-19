@@ -105,3 +105,6 @@ dist
 
 # Github Personal Token
 .github-token
+
+# Vim swap files
+*.swp

@@ -1,8 +1,7 @@
-<template>
-  <div>
-    <Navbar/>
-    Búscame bb
-  </div>
+<template lang="pug">
+  div
+    Navbar
+    p Búscame bb
 </template>
 <script>
 import Navbar from '@/components/Navbar'

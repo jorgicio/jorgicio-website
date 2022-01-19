@@ -1,8 +1,7 @@
-<template>
-  <div>
-    <Navbar/>
-    Tengo experiencia viteh
-  </div>
+<template lang="pug">
+  div
+    Navbar
+    p Tengo experiencia viteh
 </template>
 <script>
 import Navbar from '@/components/Navbar'

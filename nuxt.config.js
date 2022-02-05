@@ -5,6 +5,7 @@ export default {
     ],
     buildModules: [
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/fontawesome',
     ],
     head: {
         title: 'El sitio web de Jorgicio',
@@ -26,4 +27,19 @@ export default {
     components: true,
     build: {
     },
+    tailwindcss: {
+      jit: true
+    },
+    fontawesome: {
+      icons: { 
+        solid: [
+          'faGraduationCap',
+          'faMapMarkerAlt',
+          'faBirthdayCake',
+          'faDesktop',
+          'faQuestion'
+        ],
+        brands: []
+      }
+    }
 }

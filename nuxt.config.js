@@ -27,9 +27,6 @@ export default {
     components: true,
     build: {
     },
-    tailwindcss: {
-      jit: true
-    },
     fontawesome: {
       icons: { 
         solid: [
@@ -37,9 +34,15 @@ export default {
           'faMapMarkerAlt',
           'faBirthdayCake',
           'faDesktop',
-          'faQuestion'
+          'faQuestion',
+          'faLaptopCode',
+          'faGamepad',
+          'faTerminal'
         ],
-        brands: []
+        brands: [
+          'faTwitch',
+          'faWordpress'
+        ]
       }
     }
 }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(class="cuerpo p-8") 
+  div(class="p-8 md:p-2") 
     Navbar 
     p Acá va todo mi harte
 </template>

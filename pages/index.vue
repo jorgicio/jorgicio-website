@@ -1,46 +1,46 @@
 <template lang="pug">
   div(class="p-8 md:p-2")
     Navbar
-    div#card(class="md:flex p-8 md:pt-8 md:pb-8 md:pl-16 md:pr-16 place-content-center")
+    #card
       img(src="~/assets/img/psyduckcomputer.png" class="w-60 h-60 rounded-full border-double border-8 border-slate-400 ")
       div(class="pt-6 md:pt-8 text-center space-y-4 space-x-4")
         h1(class="font-bold leading-tight text-3xl mt-0 mb-2") Jorge Pizarro-Callejas, a.k.a «Jorgicio»
         ul.text-slate-600.text-left
-          li: font-awesome-icon(:icon="['fas','graduation-cap']" class="w-6 h-6 float-left")/ Ingeniero Informático, egresado y titulado de la Universidad Técnica Federico Santa María, Valparaíso.
-          li: font-awesome-icon(:icon="['fas','map-marker-alt']" class="text-2xl float-left")/ Actualmente en Quilpué, Región de Valparaíso, Chile.
-          li: font-awesome-icon(:icon="['fas','birthday-cake']" class="text-2xl float-left")/ {{getStringDate}}. {{getEdad}} años.
-          li: font-awesome-icon(:icon="['fas','desktop']" class="text-2xl float-left")/ Actualmente trabajando como ingeniero DevOps.
-          li: font-awesome-icon(:icon="['fas','question']" class="text-2xl float-left")/ Lo demás me lo puedes #[a(href="/contacto" class="text-slate-500 hover:text-sky-600 visited:text-slate-700") preguntar].
-        button(type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-full border border-indigo-800"): a(href="#") Descarga mi CV
-        button(type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-full border border-indigo-800"): a(href="/contacto") Contáctame
-    div#quehago(class="flex md:grid grid-flow-row p-8 md:p-1 md:w-full")
+          li: font-awesome-icon(:icon="['fas','graduation-cap']" class="icon-descripcion")/ Ingeniero Informático, egresado y titulado de la #[a(href="https://www.utfsm.cl" class="link") Universidad Técnica Federico Santa María], Valparaíso.
+          li: font-awesome-icon(:icon="['fas','map-marker-alt']" class="icon-descripcion")/ Actualmente en Quilpué, Región de Valparaíso, Chile.
+          li: font-awesome-icon(:icon="['fas','birthday-cake']" class="icon-descripcion")/ {{getStringDate}}. {{getEdad}} años.
+          li: font-awesome-icon(:icon="['fas','desktop']" class="icon-descripcion")/ Actualmente trabajando como ingeniero DevOps.
+          li: font-awesome-icon(:icon="['fas','question']" class="icon-descripcion")/ Lo demás me lo puedes #[a(href="/contacto" class="link") preguntar].
+        button(type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"): a(href="#") Descarga mi CV
+        button(type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"): a(href="/contacto") Contáctame
+    #quehago
       header(class="flex md:flex-row md:p-3")
         h1(class="font-bold leading-tight text-3xl mt-0 mb-2") A qué me dedico
-      div(class="grid grid-cols-2 gap-4")
+      div(class="grid grid-cols-2 gap-4 text-slate-600")
         div(class="cosa w-full md:p-3")
-          div.icon.float-left.p-2
+          .icon
             font-awesome-icon(:icon="['fas','laptop-code']" class="text-4xl text-teal-600") 
           div.descripcion
-            h4.font-bold.leading-tight.text-1xl.mt-0.mb-2 Desarrollo web (frontend y backend)
-            p Hago esto
+            h4.font-bold.leading-tight.text-1xl.mt-0.mb-2 Desarrollo de software (principalmente web)
+            p Me muevo tanto en #[span.foreign frontend] como en #[span.foreign backend]. He tratado con PHP, MySQL, Java, PostgreSQL, HTML, CSS, SASS/SCSS, JavaScript (NodeJS) y Python. Pero no le hago asco a otros lenguajes.
         div(class="cosa w-full md:p-3")
-          div.icon.float-left.p-2
+          .icon
             font-awesome-icon(:icon="['fab','twitch']" class="text-4xl text-teal-600")
           div.descripcion
             h4.font-bold.leading-tight.text-1xl.mt-0.mb-2 Streamer ocasional
-            p Hago esto otro
+            p A veces en mis ratos libres me pongo a jugar y suelo hacer #[span.foreign streams] en #[a(href="https://twitch.tv/jorgicio" class="link") Twitch] y #[a(href="https://trovo.live/jorgicio" class="link") Trovo].
         div(class="cosa w-full md:p-3")
-          div.icon.float-left.p-2
+          .icon
             font-awesome-icon(:icon="['fab','wordpress']" class="text-4xl text-teal-600")
           div.descripcion
             h4.font-bold.leading-tight.text-1xl.mt-0.mb-2 Blogger
-            p Y esto otro también
+            p Cuando tengo tiempo y me da la gana, escribo y opino en #[a(href="https://blog.jorgicio.net" class="link") mi blog]. Para cosas cortas, está #[a(href="https://twitter.com/Jorgicio" class="link") el Twitter].
         div(class="cosa w-full md:p-3")
-          div.icon.float-left.p-2
+          .icon
             font-awesome-icon(:icon="['fas','terminal']" class="text-4xl text-teal-600")
           div.descripcion
             h4.font-bold.leading-tight.text-1xl.mt-0.mb-2 Sysadmin
-            p Esto también
+            p Además de programar, también tengo conocimientos de administración de sistemas y algo de DevOps. Paso el 99% del tiempo en Linux. Puedes ver algo de mi trabajo en #[a(href="https://github.com/jorgicio" class="link") GitHub].
 </template>
 
 <script>

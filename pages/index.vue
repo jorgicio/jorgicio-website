@@ -68,6 +68,9 @@
         this.edad = (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) ? age - 1 : age
         return this.edad
       }
+    },
+    transition: {
+      mode: 'out-in'
     }
   }
 </script>

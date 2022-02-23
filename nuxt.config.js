@@ -6,6 +6,7 @@ export default {
     buildModules: [
         '@nuxtjs/tailwindcss',
         '@nuxtjs/fontawesome',
+        '@nuxtjs/composition-api/module'
     ],
     head: {
         title: 'El sitio web de Jorgicio',
@@ -41,7 +42,13 @@ export default {
         ],
         brands: [
           'faTwitch',
-          'faWordpress'
+          'faWordpress',
+          'faCuttlefish',
+          'faJava',
+          'faJsSquare',
+          'faPython',
+          'faHtml5',
+          'faCss3Alt'
         ]
       }
     }

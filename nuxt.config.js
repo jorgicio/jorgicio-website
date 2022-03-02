@@ -1,12 +1,11 @@
 export default {
     target: 'static',
     css: [
-        '@/assets/css/main.css',
+        '@/assets/css/main.css'
     ],
     buildModules: [
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/fontawesome',
-        '@nuxtjs/composition-api/module'
+        '@nuxtjs/fontawesome'
     ],
     head: {
         title: 'El sitio web de Jorgicio',
@@ -27,6 +26,13 @@ export default {
     plugins: [],
     components: true,
     build: {
+      postcss: {
+        plugins: {
+          'postcss-import': {},
+          'tailwindcss': {},
+          'autoprefixer': {}
+        }
+      }
     },
     fontawesome: {
       icons: { 
@@ -51,5 +57,11 @@ export default {
           'faCss3Alt'
         ]
       }
+    },
+    layoutTransition: {
+      name: 'layout',
+      mode: 'out-in',
+      appear: true,
+      css: true
     }
 }

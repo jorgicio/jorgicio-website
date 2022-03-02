@@ -23,9 +23,14 @@ module.exports = {
       'mono': ['"SFMono-Regular"','Menlo','Monaco','Consolas','"Liberation Mono"','"Courier New"','monospace']
     }
   },
-  mode: 'jit',
   purge: [
     './public/**/*.html',
     './src/**/*.{js,jsx,ts,tsx,vue}'
-  ]
+  ],
+  mode: 'jit',
+  variants: {
+    extend: {
+      textColor: ['visited'],
+    }
+  }
 }

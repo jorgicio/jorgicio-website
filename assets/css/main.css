@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
 #card {
  @apply md:flex p-8 md:pt-8 md:pb-8 md:pl-16 md:pr-16 place-content-center;
 }
@@ -28,4 +33,18 @@
 
 .link {
  @apply text-slate-500 visited:text-slate-800 hover:text-slate-600 hover:underline;
+}
+
+.container {
+ transition: all .5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.layout-enter-active,
+.layout-leave-active {
+    transition: opacity 0.5ms;
+}
+
+.layout-enter,
+.layout-leave-to {
+    opacity: 0;
 }

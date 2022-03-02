@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(class="p-8 md:p-2")
+  section(class="p-8 md:p-2 container")
     Navbar
     #card
       img(src="~/assets/img/psyduckcomputer.png" class="w-60 h-60 rounded-full border-double border-8 border-slate-400 ")
@@ -68,9 +68,6 @@
         this.edad = (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) ? age - 1 : age
         return this.edad
       }
-    },
-    transition: {
-      mode: 'out-in'
     }
   }
 </script>

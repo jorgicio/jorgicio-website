@@ -1,38 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind screens;
+@tailwind variants;
 
-#card {
- @apply md:flex p-8 md:pt-8 md:pb-8 md:pl-16 md:pr-16 place-content-center;
-}
+@layer components{
+    #card {
+    @apply md:flex p-8 md:pt-8 md:pb-8 md:pl-16 md:pr-16 place-content-center;
+    }
 
-#quehago {
- @apply flex md:grid grid-flow-row p-8 md:p-1 md:w-full;
-}
+    #quehago {
+    @apply flex md:grid grid-flow-row p-8 md:p-1 md:w-full;
+    }
 
-.icon {
- @apply float-left p-2;
-}
+    .icon {
+    @apply float-left p-2;
+    }
 
-#nav-wrapper {
- @apply flex flex-wrap relative md:w-full md:h-14;
-}
+    #nav-wrapper {
+    @apply flex flex-wrap relative md:w-full md:h-14;
+    }
 
-.icon-descripcion {
- @apply text-2xl float-left text-teal-600 mr-2;
-}
+    .icon-descripcion {
+    @apply text-2xl float-left text-teal-600 mr-2;
+    }
 
-#card ul > li {
- @apply p-1;
-}
+    #card ul > li {
+    @apply p-1;
+    }
 
-.foreign {
- @apply italic;
-}
+    .foreign {
+    @apply italic;
+    }
 
-.link {
- @apply text-slate-500 visited:text-slate-800 hover:text-slate-600 hover:underline;
+    .link {
+    @apply text-slate-500 visited:text-slate-800 hover:text-slate-600 hover:underline;
+    }
 }
 
 .container {

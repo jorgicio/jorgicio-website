@@ -108,3 +108,6 @@ dist
 
 # Vim swap files
 *.swp
+
+# Nitro files
+.output

@@ -1,4 +1,10 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+export default defineNuxtConfig({
+    bridge: {
+      meta: true,
+      vite: true
+    },
     target: 'static',
     css: [
         '@/assets/css/main.css'
@@ -27,10 +33,11 @@ export default {
     components: true,
     build: {
       postcss: {
-        plugins: {
-          'postcss-import': {},
-          'tailwindcss': {},
-          'autoprefixer': {}
+        postcssOptions: {
+          plugins: {
+            tailwindcss: {},
+            autoprefixer: {}
+          }
         }
       }
     },
@@ -59,9 +66,10 @@ export default {
       }
     },
     layoutTransition: {
-      name: 'layout',
+      name: 'Layout',
       mode: 'out-in',
       appear: true,
       css: true
     }
-}
+})
+

@@ -35,11 +35,13 @@
     .link {
     @apply text-slate-500 visited:text-slate-800 hover:text-slate-600 hover:underline;
     }
+    
+    .container {
+        transition: all .5s cubic-bezier(.55, 0, .1, 1);
+    }
 }
 
-.container {
- transition: all .5s cubic-bezier(.55, 0, .1, 1);
-}
+
 
 .layout-enter-active,
 .layout-leave-active {

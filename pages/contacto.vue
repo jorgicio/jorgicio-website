@@ -4,12 +4,10 @@
       <p>Búscame bb</p>
   </section>
 </template>
-<script>
-import Navbar from '@/components/Navbar'
-export default {
-  name: "Contacto",
-  components: {
-    Navbar
-  }
-}
+<script lang="ts">
+  import Vue from 'vue'
+
+  export default Vue.extend({
+    name: "Contacto",
+  })
 </script>

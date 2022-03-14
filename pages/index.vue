@@ -1,36 +1,3 @@
-<script lang="ts">
-  import Vue from 'vue'
-  import Navbar from '@/components/Navbar.vue'
-
-  export default Vue.extend ({
-    name: "Index",
-    components: {
-      Navbar
-    },
-    data () {
-      return {
-        edad: 0,
-        fechaNac: "1986-07-17"
-      }
-    },
-    computed: {
-      birthDate(): string {
-        let strippedDate = this.fechaNac.split("-")
-        let fecha = new Date(this.fechaNac)
-        let mes = fecha.toLocaleString('es', {month: 'long'})
-        return `${strippedDate[2]} de ${mes} de ${strippedDate[0]}`
-      },
-      myAge(): number {
-        let today = new Date()
-        let birthDate = new Date(this.fechaNac)
-        let age = today.getFullYear() - birthDate.getFullYear()
-        let month = today.getMonth() - birthDate.getMonth()
-        this.edad = (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) ? age - 1 : age
-        return this.edad
-      }
-    }
-  })
-</script>
 <template>
   <section class="p-8 md:p-2 container">
     <Navbar/>
@@ -45,8 +12,10 @@
           <li> <font-awesome-icon :icon="['fas','desktop']" class="icon-descripcion"/> Actualmente trabajando como ingeniero DevOps.</li>
           <li> <font-awesome-icon :icon="['fas','question']" class="icon-descripcion"/> Lo demás me lo puedes <a href="/contacto" class="link">preguntar</a>.</li> 
         </ul>
-        <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"/> <a href="#">Descarga mi CV</a> 
-        <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800" /> <a href="/contacto"> Contáctame</a>
+        <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"> <a href="#">Descarga mi CV</a></button>
+        <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"> <a href="/contacto"> Contáctame</a></button>
+      </div>
+    </div>
     <div id="quehago">
       <header class="flex md:flex-row md:p-3">
         <h1 class="font-bold leading-tight text-3xl mt-0 mb-2">A qué me dedico</h1></header>
@@ -88,8 +57,36 @@
           </div>
         </div>
       </div>
-      </div>
-      </div>
+       
     </div>
   </section>
 </template>
+<script lang="ts">
+  import Vue from 'vue'
+
+  export default Vue.extend ({
+    name: "Index",
+    data () {
+      return {
+        edad: 0,
+        fechaNac: "1986-07-17"
+      }
+    },
+    computed: {
+      birthDate(): string {
+        let strippedDate = this.fechaNac.split("-")
+        let fecha = new Date(this.fechaNac)
+        let mes = fecha.toLocaleString('es', {month: 'long'})
+        return `${strippedDate[2]} de ${mes} de ${strippedDate[0]}`
+      },
+      myAge(): number {
+        let today = new Date()
+        let birthDate = new Date(this.fechaNac)
+        let age = today.getFullYear() - birthDate.getFullYear()
+        let month = today.getMonth() - birthDate.getMonth()
+        this.edad = (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) ? age - 1 : age
+        return this.edad
+      }
+    }
+  })
+</script>

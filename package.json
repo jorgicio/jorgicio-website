@@ -5,16 +5,16 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "nuxi preview",
-    "generate": "nuxi generate"
+    "build": "nuxi build"
   },
   "dependencies": {
     "core-js": "^3.19.3",
     "nuxt-edge": "latest",
+    "typescript": "latest",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vue-tsc": "^0.33.1"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.4",

@@ -1,13 +1,11 @@
 <template>
-  <section class="p-8 md:p-2 container"> 
-    <Navbar />
-    <p>Acá va todo mi harte</p>
-  </section>
+  <p>Acá va todo mi harte</p>
 </template>
 <script lang="ts">
-  import Vue from 'vue'
+  import Vue from "vue";
 
   export default Vue.extend({
-    name: "Portfolio",
+    name: "portfolio",
+    layout: "frontend"
   })
 </script>

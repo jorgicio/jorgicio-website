@@ -3,52 +3,28 @@
 @tailwind utilities;
 @tailwind variants;
 
-@layer components{
-    #card {
+@layer components {
+  #card {
     @apply md:flex p-8 md:pt-8 md:pb-8 md:pl-16 md:pr-16 place-content-center;
-    }
+  }
 
-    #quehago {
+  #quehago {
     @apply flex md:grid grid-flow-row p-8 md:p-1 md:w-full;
-    }
+  }
 
-    .icon {
+  .icon {
     @apply float-left p-2;
-    }
+  }
 
-    #nav-wrapper {
-    @apply flex flex-wrap relative md:w-full md:h-14;
-    }
-
-    .icon-descripcion {
+  .icon-descripcion {
     @apply text-2xl float-left text-teal-600 mr-2;
-    }
+  }
 
-    #card ul > li {
+  #card ul > li {
     @apply p-1;
-    }
+  }
 
-    .foreign {
-    @apply italic;
-    }
-
-    .link {
+  .link {
     @apply text-slate-500 visited:text-slate-800 hover:text-slate-600 hover:underline;
-    }
-    
-    .container {
-        transition: all .5s cubic-bezier(.55, 0, .1, 1);
-    }
-}
-
-
-
-.layout-enter-active,
-.layout-leave-active {
-    transition: opacity 0.5ms;
-}
-
-.layout-enter,
-.layout-leave-to {
-    opacity: 0;
+  }
 }

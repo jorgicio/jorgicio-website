@@ -1,13 +1,11 @@
 <template>
-  <section class="p-8 md:p-2 container">
-    <Navbar/>
-      <p>Búscame bb</p>
-  </section>
+  <p>Búscame bb</p>
 </template>
 <script lang="ts">
-  import Vue from 'vue'
+  import Vue from "vue";
 
   export default Vue.extend({
-    name: "Contacto",
+    name: "contacto",
+    layout: "frontend"
   })
 </script>

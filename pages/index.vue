@@ -66,6 +66,7 @@
   export default Vue.extend ({
     name: "index",
     layout: "frontend",
+    transition: "pagina",
     data () {
       return {
         edad: 0,

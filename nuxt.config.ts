@@ -45,8 +45,5 @@ export default defineNuxtConfig({
         'faCss3Alt'
       ]
     }
-  },
-  layoutTransition: {
-    name: "pagina"
   }
 })

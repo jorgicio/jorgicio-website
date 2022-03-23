@@ -2,10 +2,11 @@
   <p>Acá va todo mi harte</p>
 </template>
 <script lang="ts">
-  import Vue from "vue";
+  import Vue from "vue"
 
   export default Vue.extend({
     name: "portfolio",
-    layout: "frontend"
+    layout: "frontend",
+    transition: "pagina"
   })
 </script>

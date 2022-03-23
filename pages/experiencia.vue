@@ -56,7 +56,8 @@
   import Vue from 'vue'
 
   export default Vue.extend({
-      name: "experiencia",
-      layout: "frontend"
-    })
+    name: "experiencia",
+    layout: "frontend",
+    transition: "pagina"
+  })
 </script>

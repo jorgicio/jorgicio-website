@@ -11,6 +11,6 @@
 
 .pagina-enter-from,
 .pagina-leave-to {
-  transform: translateX(-50px);
+  transform: translate(50px);
   opacity: 0;
 }

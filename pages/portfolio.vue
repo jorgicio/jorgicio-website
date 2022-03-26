@@ -1,47 +1,27 @@
 <template>
   <ul>
-    <li v-for="x of retrieveFiles">
-      <NuxtLink :to="`${x.file}`">
-        <img :src="`${x.thumb[0].file}`" :alt="`${x.thumb[0].fileName}`" />
+    <li v-for="x in fileNames">
+      <NuxtLink :to="`${photos}/${x}.jpg`">
+        <img :src="`${thumbnails}/${x}-thumb.jpg`" :alt="`${x}-thumb.jpg`" />
       </NuxtLink>
     </li>
   </ul>
 </template>
 <script lang="ts">
   import Vue from "vue"
-  import { filePathMapper } from "~~/composables/filemapper"
 
   export default Vue.extend({
     name: "portfolio",
     layout: "frontend",
     transition: "pagina",
     data() {
-      return { 
-        archivos: {
-          startDirectory: './assets/img/portfolio',
-          deepSearch: true,
-          extensions: ['jpg']
-        },
-        listaArchivos: []
+      return {
+        photos: './assets/img/portfolio',
+        thumbnails: `./assets/img/portfolio/thumbnails`,
+        fileNames : [...Array(8).keys()].map(
+          x => x < 9 ? '0' + (x + 1).toString() : (x + 1).toString()
+        )
       }
-    },
-    async fetch() {
-      this.listaArchivos = await filePathMapper(this.archivos).then(x => x.paths)
-    },
-    computed:{ 
-      retrieveFiles(): Object[] {
-        const lista = this.listaArchivos.map(
-          (x: { file: string; fileName: string }) => 
-            Object.assign({},{file: x.file, fileName: x.fileName}))
-        const origs = lista.filter((x: { file: string | string[] }) => !x.file.includes('thumb'))
-        const thumbs = lista.filter((x: { file: string | string[] }) => x.file.includes('thumb'))
-        return origs.map((x: { file: string; fileName: string }) => Object.assign({},
-        {
-          file: x.file,
-          fileName: x.fileName,
-          thumb: thumbs.filter((o: { file: string | string[] }) => o.file.includes(x.fileName.split('.')[0]))
-        }))
-      }
-    }
+    } 
   })
 </script>

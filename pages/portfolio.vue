@@ -1,14 +1,15 @@
 <template>
-  <ul>
-    <li v-for="x in fileNames">
-      <NuxtLink :to="`${photos}/${x}.jpg`">
-        <img :src="`${thumbnails}/${x}-thumb.jpg`" :alt="`${x}-thumb.jpg`" />
+  <div class="grid grid-cols-2 place-content-center">
+    <div v-for="photo in photos" >
+      <NuxtLink :to="`${photo.path}`">
+        <img :src="`${photo.thumbnail}`" :alt="`${photo.title}`" />
       </NuxtLink>
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 <script lang="ts">
   import Vue from "vue"
+  import photos from "~~/composables/photos"
 
   export default Vue.extend({
     name: "portfolio",
@@ -16,12 +17,9 @@
     transition: "pagina",
     data() {
       return {
-        photos: './assets/img/portfolio',
-        thumbnails: `./assets/img/portfolio/thumbnails`,
-        fileNames : [...Array(8).keys()].map(
-          x => x < 9 ? '0' + (x + 1).toString() : (x + 1).toString()
-        )
+        photos: photos()
       }
     } 
   })
+  
 </script>

@@ -9,8 +9,18 @@
   transition: all .6s cubic-bezier(1, .5, .8, 1);
 }
 
-.pagina-enter-from,
+.pagina-enter,
 .pagina-leave-to {
   transform: translate(50px);
   opacity: 0;
+}
+
+.modal-fade-enter,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.4s ease;
 }

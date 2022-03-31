@@ -34,7 +34,7 @@
           </div>
           <div class="descripcion">
             <h4 class="font-bold leading-tight text-1xl mt-0. b-2">Streamer ocasional</h4> 
-            <p>A veces en mis ratos libres me pongo a jugar y suelo hacer <span class="foreign">streams</span> en <a href="https://twitch.tv/jorgicio" class="link">Twitch</a> y <a href="https://trovo.live/jorgicio" class="link">Trovo</a>.</p>
+            <p>A veces en mis ratos libres me pongo a jugar y suelo hacer <span class="italic">streams</span> en <a href="https://twitch.tv/jorgicio" class="link">Twitch</a> y <a href="https://trovo.live/jorgicio" class="link">Trovo</a>.</p>
           </div>
         </div>
         <div class="cosa w-full md:p-3">

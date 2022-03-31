@@ -1,4 +1,4 @@
-export default ({ rootDir }) => ({
+export default ({ rootDir }: any) => ({
   theme: {
     extend: {
       fontFamily: {

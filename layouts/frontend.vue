@@ -7,9 +7,11 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import Navbar from '~~/components/Navbar.vue'
 
   export default Vue.extend({
     name: "frontend",
+    components: { Navbar },
     setup(){
       useMeta({
         title: "El sitio web de Jorgicio",

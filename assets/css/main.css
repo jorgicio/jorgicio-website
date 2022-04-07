@@ -33,6 +33,10 @@
   }
 
   .modal-window {
-    @apply text-center h-4/5 w-4/5 mt-3 py-16 rounded bg-white;
+    @apply text-center h-auto w-auto p-1 rounded bg-white mt-4;
+  }
+
+  .close-button {
+    @apply px-2 overflow-visible rounded-full bg-red-700 text-white font-bold text-xl cursor-pointer -top-4 -right-4 z-[1000] absolute;
   }
 }

@@ -12,15 +12,12 @@
   export default Vue.extend({
     name: "frontend",
     components: { Navbar },
-    setup(){
-      useMeta({
+    setup() {
+      useHead({
         title: "El sitio web de Jorgicio",
-        htmlAttrs: {
-          lang: "es"
-        },
+        charset: "utf-8",
+        viewport: "width=device-width, initial-scale=1, maximum-scale=1",
         meta: [
-          { charset: "utf-8" },
-          { name: "viewport", content: "width=device-width, initial-scale=1" },
           { hid: "description", name: "description", content: "El sitio web de Jorgicio" },
           { name: "format-detection", content: "telephone=no" }
         ],

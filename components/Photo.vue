@@ -1,13 +1,13 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-overlay" @keyup.esc="$emit('close-modal')" @click="$emit('close-modal')">
-      <div class="modal-window w-fit h-fit" @click.stop>
+      <div class="group modal-window w-fit h-fit" @click.stop>
         <div class="relative">
           <button class="close-button" @click="$emit('close-modal')">x</button>
         </div>
         <div>    
-          <img :src="photo.photoPath" :alt="photo.title" />
-          <div class="h-auto relative visible hover:invisible">
+          <img :src="photo.photoPath" :alt="photo.title" class="opacity-100 group-hover:opacity-100" />
+          <div class="h-auto relative opacity-0 group-hover:opacity-100">
             <div class="absolute z-[1000] bg-zinc-300/50 bottom-0 w-full">
               <h3 class="font-bold">{{ photo.title }}</h3>
               {{ photo.description }}

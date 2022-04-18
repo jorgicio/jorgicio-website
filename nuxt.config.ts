@@ -9,11 +9,18 @@ export default defineNuxtConfig({
   target: 'static',
   buildModules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/fontawesome',
+    '@nuxtjs/fontawesome'
   ],
   tailwindcss: {
     configPath: 'tailwind.config.ts',
     cssPath: '~/assets/css/main.css'
+  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        'defu'
+      ]
+    }
   },
   modules: [],
   plugins: [],

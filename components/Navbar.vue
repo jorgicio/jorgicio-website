@@ -7,7 +7,7 @@
           <li><NuxtLink to="/experiencia">Experiencia</NuxtLink></li>
           <li><NuxtLink to="/portfolio">Portfolio</NuxtLink></li>
           <li><NuxtLink to="/contacto">¡Contáctame!</NuxtLink></li>
-          <li><a href="https://blog.jorgicio.net">Blog</a></li>
+          <li><NuxtLink to="/blog">Blog</NuxtLink></li>
         </ul>
       </div>
     </nav>
@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
+import { defineComponent } from '#imports';
 
-  export default Vue.extend({
+  export default defineComponent({
     name: "Navbar"
-  })
+}); 
 </script>

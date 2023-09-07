@@ -10,10 +10,9 @@
   </div>
 </template>
 <script lang="ts">
-  import Vue from "vue"
   import Photo from "~~/components/Photo.vue"
 
-  export default Vue.extend({
+  export default {
     name: "portfolio",
     layout: "frontend",
     components: { Photo },
@@ -31,6 +30,12 @@
         this.showModal = true
       }
     }
-  })
-  
+  };
+</script>
+
+<script lang="ts" setup>
+  definePageMeta({
+    layout: "frontend",
+    layoutTransition: true
+  });
 </script>

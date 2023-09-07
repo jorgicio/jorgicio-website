@@ -53,11 +53,19 @@
   </div>
 </template>
 <script lang="ts">
-  import Vue from 'vue'
 
-  export default Vue.extend({
+  export default {
     name: "experiencia",
     layout: "frontend",
     transition: "pagina"
-  })
+  };
+</script>
+
+<script lang="ts" setup>
+  import { definePageMeta } from '#imports';
+
+  definePageMeta({
+    layout: "frontend",
+    layoutTransition: true
+  });
 </script>

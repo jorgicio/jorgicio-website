@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="card">
-      <img src="~/assets/img/psyduckcomputer.png" class="w-60 h-60 rounded-full border-double border-8 border-slate-400" alt="duck" />
+      <img src="/img/psyduckcomputer.png" class="w-60 h-60 rounded-full border-double border-8 border-slate-400" alt="duck" />
       <div class="pt-6 md:pt-8 text-center space-y-4 space-x-4">
         <h1 class="font-bold leading-tight text-3xl mt-0 mb-2">Jorge Pizarro-Callejas, a.k.a «Jorgicio»</h1>
         <ul class="text-slate-600 text-left">
@@ -61,9 +61,10 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
 
-  export default Vue.extend ({
+  import { defineComponent, definePageMeta } from '#imports';
+
+  export default {
     name: "index",
     layout: "frontend",
     transition: "pagina",
@@ -89,5 +90,13 @@
         return this.edad
       }
     }
-  })
+  };
+
+</script>
+
+<script lang="ts" setup>
+  definePageMeta({
+    layout: "frontend",
+    pageTransition: true
+  });
 </script>

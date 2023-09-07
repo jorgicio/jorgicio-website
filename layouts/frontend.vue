@@ -1,22 +1,20 @@
 <template>
   <div class="p-8 md:p-2 container">
     <Navbar />
-    <Nuxt />
+    <slot />
   </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
-  import Navbar from '~~/components/Navbar.vue'
+  import { useHead } from 'nuxt/app';
+  import Navbar from '~~/components/Navbar.vue';
 
-  export default Vue.extend({
+  export default {
     name: "frontend",
     components: { Navbar },
     setup() {
       useHead({
         title: "El sitio web de Jorgicio",
-        charset: "utf-8",
-        viewport: "width=device-width, initial-scale=1, maximum-scale=1",
         meta: [
           { hid: "description", name: "description", content: "El sitio web de Jorgicio" },
           { name: "format-detection", content: "telephone=no" }
@@ -26,5 +24,5 @@
         ]
       })
     }
-  })
+  };
 </script>

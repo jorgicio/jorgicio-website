@@ -1,56 +1,37 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  bridge: {
-    meta: true,
-    vite: true,
-    app: true
-  },
-  target: 'static',
-  buildModules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/fontawesome'
-  ],
+  modules: ['@nuxtjs/apollo','@nuxtjs/tailwindcss'],
   tailwindcss: {
-    configPath: 'tailwind.config.ts',
-    cssPath: '~/assets/css/main.css'
+    configPath: 'tailwind.config.ts'
   },
-  vite: {
-    optimizeDeps: {
-      include: [
-        'defu'
-      ]
+  ssr: true,
+  components: [
+    '~/components'
+  ],
+  devServerHandlers: [],
+  pages: true,
+  css: [
+    '@/assets/css/main.css', 
+    '@/assets/css/transitions.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
+  sourcemap: true,
+  devtools: {
+    enabled: true,
+    vscode: {}
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1, maximum-scale=1'
     }
   },
-  modules: [],
-  plugins: [],
-  components: true,
-  build: {},
-  css: [ 
-    '~/assets/css/transitions.css',
-  ],
-  fontawesome: {
-    icons: { 
-      solid: [
-        'faGraduationCap',
-        'faMapMarkerAlt',
-        'faBirthdayCake',
-        'faDesktop',
-        'faQuestion',
-        'faLaptopCode',
-        'faGamepad',
-        'faTerminal'
-      ],
-      brands: [
-        'faTwitch',
-        'faWordpress',
-        'faCuttlefish',
-        'faJava',
-        'faJsSquare',
-        'faPython',
-        'faHtml5',
-        'faCss3Alt'
-      ]
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: 'http://localhost:1337/graphql'
+      }
     }
   }
 })

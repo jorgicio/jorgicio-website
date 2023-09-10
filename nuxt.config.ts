@@ -33,5 +33,10 @@ export default defineNuxtConfig({
         httpEndpoint: 'http://localhost:1337/graphql'
       }
     }
+  },
+  runtimeConfig: {  
+    public: {
+      strapiBaseUri: process.env.API_URL ?? 'http://localhost:1337'
+    }
   }
 })

@@ -2,60 +2,45 @@
   <NuxtLayout name="frontend"></NuxtLayout>
   <NuxtLayout name="categories"></NuxtLayout>
   <div>
-    <Articles :articles="articles"></Articles>
+    <Articles :articles="data.articles"></Articles>
   </div>
 </template>
 
-<script lang="ts">
+<script setup>
   import Articles from "~~/components/Articles.vue";
   import gql from "graphql-tag";
 
-  export default {
-    data() {
-      return {
-        articles: {
-          data: []
-        }
-      }
-    },
-    components: {
-      Articles,
-    },
-    apollo: {
-      articles: {
-        prefetch: true,
-        query: gql`
-          query Articles {
-            articles {
+  const query = gql`
+    query Articles {
+      articles {
+        data {
+          id
+          attributes {
+            title
+            content
+            image {
               data {
-                id
                 attributes {
-                  title
-                  content
-                  image {
-                    data {
-                      attributes {
-                        url
-                      }
-                    }
-                  }
-                  category {
-                    data {
-                      attributes {
-                        name
-                      }
-                    }
-                  }
+                  url
                 }
               }
             }
-          }`
+            category {
+              data {
+                attributes {
+                  name
+                }
+              }
+            }
+          }
+        }
       }
-    }
-  }
+    }`;
+  const variables = { limit : 10 }
+  const { data } = await useAsyncQuery(query,variables);
 
   definePageMeta({
     layout: false,
-    pageTransition: true
+    //pageTransition: true
   });
 </script>

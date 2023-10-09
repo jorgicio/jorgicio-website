@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link v-for="article in leftArticles"
-    :to="{ name: 'articles-id', params: { id: article.id } }"
+    :to="{ name: 'blog-articles-id', params: { id: article.id } }"
     :key="article.id">
       <div>
         <div v-if="article.attributes.image.data">
@@ -22,7 +22,7 @@
     </router-link>
 
     <router-link v-for="article in rightArticles"
-    :to="{ name: 'articles-id', params: { id: article.id } }"
+    :to="{ name: 'blog-articles-_id', params: { id: article.id } }"
     :key="article.id">
       <div>
         <div v-if="article.attributes.image.data">
@@ -46,11 +46,10 @@
 </template>
 
 <script lang="ts">
-  //const runtimeConfig = useRuntimeConfig();
   export default {
     data() {
       return {
-        api_url : process.env.API_URL ?? 'http://localhost:1337'
+        api_url : useRuntimeConfig().public.strapiBaseUri
       }
     },
     props: {

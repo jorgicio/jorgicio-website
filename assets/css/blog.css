@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  #blog-container {
+    @apply grid grid-flow-col auto-cols-max gap-3 p-10;
+  }
+  #categories {
+    @apply flex flex-auto;
+  }
+  #articles {
+    @apply flex flex-auto;
+  }
+}
+

@@ -1,4 +1,6 @@
 <template>
+  <NuxtLayout name="frontend"></NuxtLayout>
+  <NuxtLayout name="categories"></NuxtLayout>
   <div>
     <client-only>
       <div>

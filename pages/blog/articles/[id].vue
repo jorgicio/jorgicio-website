@@ -1,4 +1,6 @@
 <template>
+  <NuxtLayout name="frontend"></NuxtLayout>
+  <NuxtLayout name="categories"></NuxtLayout>
   <div>
     <div 
       v-if="data.article.data.attributes.image.data"

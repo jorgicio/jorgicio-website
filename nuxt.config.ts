@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/main.css', 
     '@/assets/css/transitions.css',
+    '@/assets/css/blog.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   sourcemap: true,

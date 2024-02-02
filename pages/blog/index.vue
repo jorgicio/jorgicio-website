@@ -1,8 +1,17 @@
 <template>
-  <NuxtLayout name="frontend"></NuxtLayout>
-  <NuxtLayout name="categories"></NuxtLayout>
   <div>
-    <Articles :articles="data.articles"></Articles>
+    <NuxtLayout name="frontend"></NuxtLayout>
+    <div id="blog-container">  
+      <div id="categories">
+        <p>Categorías</p>
+        <div id="categories-list">
+          <NuxtLayout name="categories"></NuxtLayout>
+        </div>
+      </div>
+      <div id="articles">
+        <Articles :articles="data.articles"></Articles>
+      </div>
+    </div>
   </div>
 </template>
 

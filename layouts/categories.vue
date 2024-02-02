@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="categories">
     <ul>
       <li v-for="category in data.categories.data" :key="category.id">
         <NuxtLink :to="{ name: 'blog-categories-id', params: { id: category.id } }">

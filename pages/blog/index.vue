@@ -1,15 +1,19 @@
 <template>
   <div>
     <NuxtLayout name="frontend"></NuxtLayout>
-    <div id="blog-container">  
-      <div id="categories">
-        <p>Categorías</p>
-        <div id="categories-list">
-          <NuxtLayout name="categories"></NuxtLayout>
+    <div id="blog-container">
+      <div id="sidebar" class="col-wrapper">
+        <div id="categories">
+          <p class="blog-title">Categorías</p>
+          <div id="categories-list">
+            <NuxtLayout name="categories"></NuxtLayout>
+          </div>
         </div>
       </div>
-      <div id="articles">
-        <Articles :articles="data.articles"></Articles>
+      <div id="articles-container" class="col-wrapper">
+        <div id="articles">
+          <Articles :articles="data.articles"></Articles>
+        </div>
       </div>
     </div>
   </div>

@@ -1,15 +1,24 @@
 <template>
   <NuxtLayout name="frontend"></NuxtLayout>
-  <NuxtLayout name="categories"></NuxtLayout>
-  <div>
-    <client-only>
-      <div>
-        <div>
-          <h1>{{ data.category.data.attributes.name }}</h1>
-          <Articles :articles="data.category.data.attributes.articles"></Articles>
+  <div id="blog-container">
+    <div id="sidebar" class="col-wrapper">
+        <div id="categories">
+          <p class="blog-title">Categorías</p>
+          <div id="categories-list">
+            <NuxtLayout name="categories"></NuxtLayout>
+          </div>
         </div>
       </div>
-    </client-only>
+    <div id="articles-container" class="col-wrapper">
+      <client-only>
+        <div id="articles">
+          <div>
+            <h1 id="cats-title">Posts en {{ data.category.data.attributes.name }}</h1>
+            <Articles :articles="data.category.data.attributes.articles"></Articles>
+          </div>
+        </div>
+      </client-only>
+    </div>
   </div>
 </template>
 

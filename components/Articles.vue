@@ -13,7 +13,7 @@
           <p id="category" v-if="article.attributes.category.data.attributes.name">
             {{ article.attributes.category.data.attributes.name }}
           </p>
-          <p id="title">
+          <p class="post-title">
             <router-link :to="{ name: 'blog-articles-id', params: { id: article.id } }">{{ article.attributes.title }}</router-link>
           </p>
           <p id="excerpt">

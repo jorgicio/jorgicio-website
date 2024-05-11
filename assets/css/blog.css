@@ -5,13 +5,22 @@
 
 @layer components {
   #blog-container {
-    @apply grid grid-flow-col auto-cols-max gap-3 p-10;
+    @apply grid grid-cols-5 gap-3 p-10;
   }
-  #categories {
-    @apply flex flex-auto;
+  #sidebar {
+    @apply col-span-1;
   }
-  #articles {
-    @apply flex flex-auto;
+  #articles-container {
+    @apply col-span-4;
+  }
+  .blog-title {
+    @apply uppercase font-bold text-xl;
+  }
+  .post-title {
+    @apply uppercase font-bold text-4xl;
+  }
+  #cats-title {
+    @apply font-bold text-4xl;
   }
 }
 

@@ -39,5 +39,6 @@ export default defineNuxtConfig({
     public: {
       strapiBaseUri: process.env.API_URL ?? 'http://localhost:1337'
     }
-  }
+  },
+  compatibilityDate: '2026-11-22',
 })

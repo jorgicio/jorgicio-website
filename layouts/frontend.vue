@@ -16,8 +16,8 @@
       useHead({
         title: "El sitio web de Jorgicio",
         meta: [
-          { hid: "description", name: "description", content: "El sitio web de Jorgicio" },
-          { name: "format-detection", content: "telephone=no" }
+          { name: "description", content: "El sitio web de Jorgicio" },
+          { httpEquiv: "format-detection", content: "telephone=no" }
         ],
         link: [
           {}

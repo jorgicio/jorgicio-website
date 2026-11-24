@@ -9,7 +9,7 @@
           <li> <font-awesome-icon :icon="['fas','map-marker-alt']" class="icon-descripcion"/> Actualmente en Quilpué, Región de Valparaíso, Chile.</li>
           <li> <font-awesome-icon :icon="['fas','birthday-cake']" class="icon-descripcion"/> {{birthDate}}. {{myAge}} años.</li>
           <li> <font-awesome-icon :icon="['fas','desktop']" class="icon-descripcion"/> Actualmente trabajando como ingeniero DevOps.</li>
-          <li> <font-awesome-icon :icon="['fas','question']" class="icon-descripcion"/> Lo demás me lo puedes <a href="/contacto" class="link">preguntar</a>.</li> 
+          <li> <font-awesome-icon :icon="['fas','question']" class="icon-descripcion"/> Lo demás me lo puedes <a href="/contacto" class="link">preguntar</a>.</li>
         </ul>
         <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"> <NuxtLink to="#">Descarga mi CV</NuxtLink></button>
         <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"> <NuxtLink to="/contacto"> Contáctame</NuxtLink></button>
@@ -22,7 +22,7 @@
         <div class="cosa w-full md:p-3">
           <div class="icon">
             <font-awesome-icon :icon="['fas','laptop-code']" class="text-4xl text-teal-600"/>
-          </div> 
+          </div>
           <div class="descripcion">
             <h4 class="font-bold leading-tight text-1xl mt-0 mb-2"> Desarrollo de software (principalmente web)</h4>
             <p>Me muevo tanto en <span class="italic">frontend</span> como en <span class="italic">backend</span>. He tratado con PHP, MySQL, Java, PostgreSQL, HTML, CSS, SASS/SCSS, JavaScript (NodeJS) y Python. Pero no le hago asco a otros lenguajes.</p>
@@ -33,7 +33,7 @@
             <font-awesome-icon :icon="['fab','twitch']" class="text-4xl text-teal-600"/>
           </div>
           <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0. b-2">Streamer ocasional</h4> 
+            <h4 class="font-bold leading-tight text-1xl mt-0. b-2">Streamer ocasional</h4>
             <p>A veces en mis ratos libres me pongo a jugar y suelo hacer <span class="italic">streams</span> en <a href="https://twitch.tv/jorgicio" class="link">Twitch</a> y <a href="https://trovo.live/jorgicio" class="link">Trovo</a>.</p>
           </div>
         </div>
@@ -41,8 +41,8 @@
           <div class="icon">
             <font-awesome-icon :icon="['fab','wordpress']" class="text-4xl text-teal-600"/>
           <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2">Blogger</h4> 
-            <p>Cuando tengo tiempo y me da la gana, escribo y opino en <a href="https://blog.jorgicio.net" class="link">mi blog</a>. Para cosas cortas, está <a href="https://twitter.com/Jorgicio" class="link">el Twitter</a></p> 
+            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2">Blogger</h4>
+            <p>Cuando tengo tiempo y me da la gana, escribo y opino en <a href="https://blog.jorgicio.net" class="link">mi blog</a>. Para cosas cortas, está <a href="https://twitter.com/Jorgicio" class="link">el Twitter</a></p>
             </div>
           </div>
         </div>
@@ -51,11 +51,11 @@
             <font-awesome-icon :icon="['fas','terminal']" class="text-4xl text-teal-600"/>
           </div>
           <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2">Sysadmin</h4> 
-            <p>Además de programar, también tengo conocimientos de administración de sistemas y algo de DevOps. Paso el 99% del tiempo en Linux. Puedes ver algo de mi trabajo en <a href="https://github.com/jorgicio" class="link">GitHub</a>.</p> 
+            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2">Sysadmin</h4>
+            <p>Además de programar, también tengo conocimientos de administración de sistemas y algo de DevOps. Paso el 99% del tiempo en Linux. Puedes ver algo de mi trabajo en <a href="https://github.com/jorgicio" class="link">GitHub</a>.</p>
           </div>
         </div>
-      </div>   
+      </div>
     </section>
   </div>
 </template>

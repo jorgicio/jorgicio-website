@@ -12,7 +12,7 @@
       </div>
       <div id="articles-container" class="col-wrapper">
         <div id="articles">
-          <Articles :articles="data.articles"></Articles>
+          <Articles :articles="response.data"></Articles>
         </div>
       </div>
     </div>
@@ -21,36 +21,12 @@
 
 <script setup>
   import Articles from "~~/components/Articles.vue";
-  import gql from "graphql-tag";
+  import { useStrapi } from "~~/composables/useStrapi";
 
-  const query = gql`
-    query Articles {
-      articles {
-        data {
-          id
-          attributes {
-            title
-            content
-            image {
-              data {
-                attributes {
-                  url
-                }
-              }
-            }
-            category {
-              data {
-                attributes {
-                  name
-                }
-              }
-            }
-          }
-        }
-      }
-    }`;
-  const variables = { limit : 10 }
-  const { data } = await useAsyncQuery(query,variables);
+  const { getArticles } = useStrapi();
+
+  // Load first 10 articles (no category filter)
+  const response = await getArticles(10);
 
   definePageMeta({
     layout: false,

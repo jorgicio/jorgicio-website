@@ -1,10 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/apollo','@nuxtjs/tailwindcss'],
-  tailwindcss: {
-    configPath: 'tailwind.config.ts'
-  },
+  modules: [],
   ssr: true,
   components: [
     '~/components'
@@ -12,15 +9,17 @@ export default defineNuxtConfig({
   devServerHandlers: [],
   pages: true,
   css: [
-    '@/assets/css/main.css', 
+    '@/assets/css/main.css',
     '@/assets/css/transitions.css',
-    '@/assets/css/blog.css',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@/assets/css/blog.css'
   ],
   sourcemap: true,
   devtools: {
     enabled: true,
-    vscode: {}
+
+    timeline: {
+      enabled: true,
+    },
   },
   app: {
     head: {
@@ -28,17 +27,16 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1'
     }
   },
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: process.env.BACKEND_URL ?? 'http://localhost:1337/graphql'
-      }
-    }
-  },
-  runtimeConfig: {  
+  runtimeConfig: {
     public: {
-      strapiBaseUri: process.env.API_URL ?? 'http://localhost:1337'
+      strapiBaseUri: process.env.API_URL ?? 'http://localhost:1337',
+      strapiApiToken: process.env.STRAPI_API_TOKEN ?? ''
     }
   },
   compatibilityDate: '2026-11-22',
+  experimental: {
+    // Workaround for https://github.com/nuxt/nuxt/issues/33606
+    // (Nuxt 3.21.x dev: "Pre-transform error: Failed to resolve import #app-manifest")
+    appManifest: false
+  },
 })

@@ -1,7 +1,8 @@
 <template>
-  <NuxtLayout name="frontend"></NuxtLayout>
-  <div id="blog-container">
-    <div id="sidebar" class="col-wrapper">
+  <div>
+    <NuxtLayout name="frontend"></NuxtLayout>
+    <div id="blog-container">
+      <div id="sidebar" class="col-wrapper">
         <div id="categories">
           <p class="blog-title">Categorías</p>
           <div id="categories-list">
@@ -9,58 +10,27 @@
           </div>
         </div>
       </div>
-    <div id="articles-container" class="col-wrapper">
-      <client-only>
-        <div id="articles">
-          <div>
-            <h1 id="cats-title">Posts en {{ data.category.data.attributes.name }}</h1>
-            <Articles :articles="data.category.data.attributes.articles"></Articles>
+      <div id="articles-container" class="col-wrapper">
+        <client-only>
+          <div id="articles">
+            <div>
+              <h1 id="cats-title">Posts en {{ category.name }}</h1>
+              <Articles :articles="category.articles"></Articles>
+            </div>
           </div>
-        </div>
-      </client-only>
+        </client-only>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
   import Articles from "~~/components/Articles";
-  import gql from "graphql-tag";
+  import { useStrapi } from "~~/composables/useStrapi";
 
-  const query = gql`
-          query Category($id: ID!){
-            category(id: $id) {
-              data {
-                attributes {
-                  name
-                  articles {
-
-                    data {
-                      attributes {
-                        title
-                        content
-                        image {
-                          data {
-                            attributes {
-                              url
-                            }
-                          }
-                        }
-                        category {
-                          data {
-                            attributes {
-                              name
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        `;
   const route = useRoute();
-  const { data } = await useAsyncQuery(query, { id : parseInt(route.params.id) });
+  const { getCategory } = useStrapi();
+
+  const { data: category } = await getCategory(route.params.id);
   
 </script>

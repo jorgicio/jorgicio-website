@@ -1,9 +1,9 @@
 <template>
   <div id="categories">
     <ul>
-      <li v-for="category in data.categories.data" :key="category.id">
-        <NuxtLink :to="{ name: 'blog-categories-id', params: { id: category.id } }">
-          {{ category.attributes.name }}
+      <li v-for="category in data" :key="category.id">
+        <NuxtLink :to="{ name: 'blog-categories-id', params: { id: category.documentId } }">
+          {{ category.name }}
         </NuxtLink>
       </li>
     </ul>
@@ -12,23 +12,10 @@
 </template>
 
 <script setup>
-  import gql from 'graphql-tag';
+  import { useStrapi } from "~~/composables/useStrapi";
 
-  const route = useRoute();
+  const { getCategories } = useStrapi();
 
-  const query = gql`query {
-    categories {
-      data {
-        id
-        attributes {
-          name
-        }
-      }
-    }
-  }`;
-  const variables = { 
-    limit: 10,
-    id : parseInt(route.params.id) };
-  const { data } = await useAsyncQuery(query,variables);
-
+  const { data } = await getCategories();
+  // data = [{ id, attributes: { name } }]
 </script>

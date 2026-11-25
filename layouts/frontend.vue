@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-  import { useHead } from 'nuxt/app';
+  import { useHead, useSeoMeta } from 'nuxt/app';
   import Navbar from '~~/components/Navbar.vue';
 
   export default {
@@ -22,6 +22,13 @@
         link: [
           {}
         ]
+      }),
+      useSeoMeta({
+        title: "El sitio web de Jorgicio",
+        ogTitle: "El sitio web de Jorgicio",
+        description: "Description",
+        ogDescription: "Description",
+        ogImage: "http://image.url/image.png"
       })
     }
   };

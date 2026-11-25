@@ -10,6 +10,7 @@
     "generate": "nuxi generate",
     "typecheck": "nuxi typecheck"
   },
+  "type": "module",
   "engines": {
     "node": ">=24.0.0"
   },
@@ -19,10 +20,9 @@
     "@fortawesome/free-regular-svg-icons": "^7.0",
     "@fortawesome/free-solid-svg-icons": "^7.0",
     "@fortawesome/vue-fontawesome": "^3.3.3",
-    "@koa/router": "^12.0.2",
     "tailwindcss": "^4.3",
-    "@tailwindcss/postcss": "^4.3",
-    "postcss": "^8.5",
+    "vite": "^8.3",
+    "@tailwindcss/vite": "^4.3",
     "typescript": "^7.0.0",
     "vue": "^3.5.45",
     "vue-router": "^5.5",
@@ -34,6 +34,7 @@
     "@vue/language-core": "^3.3.0",
     "@vue/runtime-dom": "^3.5.45",
     "@unhead/vue": "^3.5",
-    "nuxt": "^4.7.0"
+    "nuxt": "^4.7.0",
+    "@vitejs/devtools-vite": "^0.8"
   }
 }

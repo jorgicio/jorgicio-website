@@ -5,10 +5,6 @@
   --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-body {
-  font-family: var(--font-sans);
-}
-
 @layer components {
   #card {
     @apply md:flex p-8 md:pt-8 md:pb-8 md:pl-16 md:pr-16 place-content-center;
@@ -19,11 +15,11 @@ body {
   }
 
   .icon {
-    @apply float-left p-2;
+    @apply size-12 float-left p-2;
   }
 
   .icon-descripcion {
-    @apply text-2xl float-left text-teal-600 mr-2;
+    @apply size-4 float-left text-teal-600 mr-2;
   }
 
   .card ul > li {

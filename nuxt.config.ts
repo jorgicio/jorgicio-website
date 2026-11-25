@@ -1,10 +1,11 @@
 import { defineNuxtConfig } from "nuxt/config";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   modules: [],
   ssr: true,
   components: [
-    '~/components'
+    '@/components'
   ],
   devServerHandlers: [],
   pages: true,
@@ -13,6 +14,11 @@ export default defineNuxtConfig({
     '@/assets/css/transitions.css',
     '@/assets/css/blog.css'
   ],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ]
+  },
   sourcemap: true,
   devtools: {
     enabled: true,

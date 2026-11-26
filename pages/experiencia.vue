@@ -1,50 +1,7 @@
 <template>
   <div id="experiencia" class="grid grid-cols-6 gap-2">
     <div class="pt-6 pl-2 pr-2 md:pt-8 text-center space-y-3 col-span-2">
-      <h1 class="font-bold leading-tight text-3xl mt-0 mb-2" > Experiencias informáticas en general</h1>
-      <p><strong>Disclaimer:</strong> El listado a continuación está evaluado según experiencia y estudio personal.</p>
-
-      <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-teal-700"><font-awesome-icon :icon="['fab','cuttlefish']"/>C</span> 
-      </div>
-      <div class="w-full bg-gray-200 rounded-full">
-        <div class="bg-teal-600 text-xs font-medium text-teal-100 text-center p-0.5 leading-none rounded-full" style="width: 60%">60%</div>
-      </div>
-
-      <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-teal-700"><font-awesome-icon :icon="['fab','java']"/>Java</span> 
-      </div>
-      <div class="w-full bg-gray-200 rounded-full">
-        <div class="bg-teal-600 text-xs font-medium text-teal-100 text-center p-0.5 leading-none rounded-full" style="width: 55%">55%</div>
-      </div>
-
-      <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-teal-700"><font-awesome-icon :icon="['fab','js-square']"/>JavaScript</span> 
-      </div>
-      <div class="w-full bg-gray-200 rounded-full">
-        <div class="bg-teal-600 text-xs font-medium text-teal-100 text-center p-0.5 leading-none rounded-full" style="width: 75%">75%</div>
-      </div>
-
-      <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-teal-700"><font-awesome-icon :icon="['fab','python']"/>Python</span> 
-      </div>
-      <div class="w-full bg-gray-200 rounded-full">
-        <div class="bg-teal-600 text-xs font-medium text-teal-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
-      </div>
-
-      <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-teal-700"><font-awesome-icon :icon="['fab','html5']"/>HTML</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full">
-        <div class="bg-teal-600 text-xs font-medium text-teal-100 text-center p-0.5 leading-none rounded-full" style="width: 90%">90%</div>
-      </div>
-
-      <div class="flex justify-between mb-1">
-        <span class="text-base font-medium text-teal-700"><font-awesome-icon :icon="['fab','css3-alt']"/>CSS</span> 
-      </div>
-      <div class="w-full bg-gray-200 rounded-full">
-        <div class="bg-teal-600 text-xs font-medium text-teal-100 text-center p-0.5 leading-none rounded-full" style="width: 75%">75%</div>
-      </div>
+      Acá va algo
     </div>
     <div class="col-span-4 p-3">
       <h1 class="font-bold leading-tight text-3xl mt-0 mb-2 text-center" > Habilidades y experiencia</h1>

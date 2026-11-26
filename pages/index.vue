@@ -1,59 +1,12 @@
 <template>
   <div>
     <section id="card">
-      <img src="/img/psyduckcomputer.png" class="w-60 h-60 rounded-full border-double border-8 border-slate-400" alt="duck" />
-      <div class="pt-6 md:pt-8 text-center space-y-4 space-x-4">
-        <h1 class="font-bold leading-tight text-3xl mt-0 mb-2">Jorge Pizarro-Callejas, a.k.a «Jorgicio»</h1>
-        <ul class="text-slate-600 text-left">
-          <li> <font-awesome-icon icon="fa-solid fa-graduation-cap" class="icon-descripcion" /> Ingeniero Informático, egresado y titulado de la <a href="https://www.utfsm.cl" class="link">Universidad Técnica Federico Santa María</a>, Valparaíso.</li>
-          <li> <font-awesome-icon icon="fa-solid fa-map-marker-alt" class="icon-descripcion"/> Actualmente en Quilpué, Región de Valparaíso, Chile.</li>
-          <li> <font-awesome-icon icon="fa-solid fa-desktop" class="icon-descripcion"/> Actualmente trabajando como ingeniero DevOps.</li>
-          <li> <font-awesome-icon icon="fa-solid fa-question" class="icon-descripcion"/> Lo demás me lo puedes <a href="/contacto" class="link">preguntar</a>.</li>
-        </ul>
-        <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"> <NuxtLink to="#">Descarga mi CV</NuxtLink></button>
-        <button type="button" class="text-center font-medium hover:bg-slate-200 px-5 py-2.5 rounded-xl border border-indigo-800"> <NuxtLink to="/contacto"> Contáctame</NuxtLink></button>
+      <div id="image" class="col-span-2">
+        <NuxtImg src="/img/psyduckcomputer.png" class="w-60 h-60 rounded-full border-double border-8 border-slate-400" alt="duck" />
       </div>
-    </section>
-    <section id="quehago">
-      <header class="flex md:flex-row md:p-3">
-        <h1 class="font-bold leading-tight text-3xl mt-0 mb-2">A qué me dedico</h1></header>
-      <div class="grid grid-cols-2 gap-4 text-slate-600">
-        <div class="cosa w-full md:p-3">
-          <div class="icon">
-            <font-awesome-icon icon="fa-solid fa-laptop-code" class="text-4xl text-teal-600"/>
-          </div>
-          <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2"> Desarrollo de software (principalmente web)</h4>
-            <p>Me muevo tanto en <span class="italic">frontend</span> como en <span class="italic">backend</span>. He tratado con PHP, MySQL, Java, PostgreSQL, HTML, CSS, SASS/SCSS, JavaScript (NodeJS) y Python. Pero no le hago asco a otros lenguajes.</p>
-          </div>
-          </div>
-        <div class="cosa w-full md:p-3">
-          <div class="icon">
-            <font-awesome-icon icon="fa-brands fa-twitch" class="text-4xl text-teal-600"/>
-          </div>
-          <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0. b-2">Streamer ocasional</h4>
-            <p>A veces en mis ratos libres me pongo a jugar y suelo hacer <span class="italic">streams</span> en <a href="https://twitch.tv/jorgicio" class="link">Twitch</a> y <a href="https://trovo.live/jorgicio" class="link">Trovo</a>.</p>
-          </div>
-        </div>
-        <div class="cosa w-full md:p-3">
-          <div class="icon">
-            <font-awesome-icon icon="fa-brands fa-wordpress" class="text-4xl text-teal-600"/>
-          <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2">Blogger</h4>
-            <p>asdasdasdasdasd asdasdasdsa</p>
-            </div>
-          </div>
-        </div>
-        <div class="cosa w-full md:p-3">
-          <div class="icon">
-            <font-awesome-icon icon="fa-solid fa-terminal" class="text-4xl text-teal-600"/>
-          </div>
-          <div class="descripcion">
-            <h4 class="font-bold leading-tight text-1xl mt-0 mb-2">Sysadmin</h4>
-            <p>Además de programar, también tengo conocimientos de administración de sistemas y algo de DevOps. Paso el 99% del tiempo en Linux. Puedes ver algo de mi trabajo en <a href="https://github.com/jorgicio" class="link">GitHub</a>.</p>
-          </div>
-        </div>
+      <div id="introduction" class="col-span-4">
+        <h1>Jorge Pizarro-Callejas</h1>
+        <h2>a.k.a. Jorgicio</h2>
       </div>
     </section>
   </div>

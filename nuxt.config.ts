@@ -2,7 +2,16 @@ import { defineNuxtConfig } from "nuxt/config";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: [],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/image',
+    '@nuxt/fonts'
+  ],
+  fonts: {
+    families: [
+      { name: 'Nunito', provider: 'google', global: true }
+    ]
+  },
   ssr: true,
   components: [
     '@/components'

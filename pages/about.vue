@@ -1,5 +1,9 @@
 <template>
-uwu
+  <div>
+    <section id="about">
+      Hello
+    </section>
+  </div>
 </template>
 <script lang="ts">
 export default {

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
 
 @layer components {
   #blog-container {
@@ -20,4 +21,3 @@
     @apply font-bold text-4xl;
   }
 }
-

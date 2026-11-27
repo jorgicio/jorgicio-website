@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <NuxtLayout name="frontend"></NuxtLayout>
+  <NuxtLayout name="frontend">
     <div id="blog-container">
       <div id="sidebar" class="col-wrapper">
         <div id="categories">
@@ -21,7 +20,7 @@
         </client-only>
       </div>
     </div>
-  </div>
+  </NuxtLayout>
 </template>
 
 <script setup>

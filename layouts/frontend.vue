@@ -1,7 +1,9 @@
 <template>
-  <div class="p-8 md:p-2 container">
+  <div class="min-h-screen">
     <Navbar />
-    <slot />
+    <main class="mx-auto w-full max-w-6xl px-4 py-6 md:px-6">
+      <slot />
+    </main>
   </div>
 </template>
 

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "./blog.css";
+@import "./transitions.css";
 
 @theme {
   --font-sans: 'Nunito', sans-serif;
@@ -38,7 +40,7 @@
 }
 
 @layer components {
-  #card {
+  .card {
     @apply grid grid-cols-6 gap-2 p-10;
   }
 
@@ -56,5 +58,9 @@
 
   .close-button {
     @apply px-2 overflow-visible rounded-full bg-red-700 text-white font-bold text-xl cursor-pointer -top-4 -right-4 z-[1000] absolute;
+  }
+
+  .active-link {
+    @apply underline decoration-teal-500;
   }
 }

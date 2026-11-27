@@ -19,9 +19,7 @@ export default defineNuxtConfig({
   devServerHandlers: [],
   pages: true,
   css: [
-    '@/assets/css/main.css',
-    '@/assets/css/transitions.css',
-    '@/assets/css/blog.css'
+    '@/assets/css/main.css'
   ],
   vite: {
     plugins: [
